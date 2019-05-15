@@ -1793,6 +1793,18 @@ static int ijkff_inject_callback(void *opaque, int message, void *data, size_t d
     });
 }
 
++ (void)setSeiCallback:(int(*)(int64_t, int,char*))cb
+{
+    ijkmp_global_set_sei_callback(cb);
+}
+
++ (void)setRenderCallback:(int(*)(int64_t pts))cbb
+{
+    ijkmp_global_set_render_callback(cbb);
+}
+
+
+
 #pragma mark IJKFFHudController
 - (void)setHudValue:(NSString *)value forKey:(NSString *)key
 {

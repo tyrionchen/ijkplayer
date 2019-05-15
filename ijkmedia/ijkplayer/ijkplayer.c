@@ -136,6 +136,15 @@ IjkMediaPlayer *ijkmp_create(int (*msg_loop)(void*))
     return NULL;
 }
 
+void ijkmp_global_set_sei_callback(ijk_sei_callback cb)
+{
+    ffp_global_set_sei_callback(cb);
+}
+
+void  ijkmp_global_set_render_callback(ijk_render_callback cb) {
+    ffp_global_set_render_callback(cb);
+}
+
 void *ijkmp_set_inject_opaque(IjkMediaPlayer *mp, void *opaque)
 {
     assert(mp);

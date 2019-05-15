@@ -42,6 +42,8 @@
 #include "ijksdl/ijksdl.h"
 
 typedef int (*ijk_inject_callback)(void *opaque, int type, void *data, size_t data_size);
+typedef int (*ijk_sei_callback)(int64_t pts, int method, char *json);
+typedef int (*ijk_render_callback)(int64_t pts);
 
 #define FFP_OPT_CATEGORY_FORMAT 1
 #define FFP_OPT_CATEGORY_CODEC  2

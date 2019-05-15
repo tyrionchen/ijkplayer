@@ -39,6 +39,9 @@ void      ffp_io_stat_complete_register(void (*cb)(const char *url,
                                                    int64_t read_bytes, int64_t total_size,
                                                    int64_t elpased_time, int64_t total_duration));
 
+void  ffp_global_set_sei_callback(ijk_sei_callback cb);
+void  ffp_global_set_render_callback(ijk_render_callback cb);
+
 FFPlayer *ffp_create();
 void      ffp_destroy(FFPlayer *ffp);
 void      ffp_destroy_p(FFPlayer **pffp);
